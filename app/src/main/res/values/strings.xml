@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">JinYu</string>
+
+    <string name="menu_settings">设置</string>
+    <string name="menu_about">关于</string>
+
+    <string name="sing">播放声音</string>
+
+
+    <string name="tab_menu_alert">词典</string>
+    <string name="tab_menu_profile">日推</string>
+    <string name="tab_menu_pay">句子赏析</string>
+    <string name="tab_menu_setting">设置</string>
+
 </resources>

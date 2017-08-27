@@ -8,6 +8,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.jinyu.Fragment.MyFragment1;
 import com.example.jinyu.R;
 import com.example.jinyu.Sound.Sound;
 
@@ -23,7 +24,7 @@ public class MyBaseExpandableListAdapter extends BaseExpandableListAdapter {
     private ArrayList<ArrayList<Item>> iData;
     private Context mContext;
 
-    public MyBaseExpandableListAdapter(ArrayList<Group> gData,ArrayList<ArrayList<Item>> iData, Context mContext) {
+    public MyBaseExpandableListAdapter(ArrayList<Group> gData, ArrayList<ArrayList<Item>> iData, MyFragment1 mContext) {
         this.gData = gData;
         this.iData = iData;
         this.mContext = mContext;
