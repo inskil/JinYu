@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    card:cardBackgroundColor="@android:color/black"
+    card:cardCornerRadius="10dp">
+    <!-- 这个是在容器中央的 -->
+
+    <TextView
+        android:id="@+id/stc_cont"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:focusable="false"
+        android:text="content" />
+
+    <!-- 在文字的下边 -->
+    <ImageButton
+        android:id="@+id/stc_btn"
+        android:layout_below="@id/stc_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/button"/>
+
+    <!-- 在图片的下边 -->
+    <TextView
+        android:id="@+id/stc_anal"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/stc_btn"
+        android:layout_centerVertical="true"
+        android:text="analysis"/>
+
+</RelativeLayout>
+
