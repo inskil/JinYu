@@ -6,16 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.jinyu.SentenceAct.SentenceAnal;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
     public static Init initialer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialer = new Init(this);
+
 
         TextView tv = (TextView)findViewById(R.id.click_tx);
         tv.setOnClickListener(new View.OnClickListener()
@@ -25,16 +26,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v)
 
             {
-                Intent intent = new Intent(MainActivity.this,SentenceAnal.class);
+                Intent intent = new Intent(MainActivity.this,Main2.class);
                 startActivity(intent);
             }
         });
 
+
     }
-
-
-
-
 
 
 }
