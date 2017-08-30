@@ -1,8 +1,12 @@
 package com.example.jinyu.DicAdpList;
 
 import android.content.Context;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 
 import com.example.jinyu.Database.GreenDaoManager;
@@ -13,7 +17,7 @@ import com.example.jinyu.R;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class DicList extends AppCompatActivity {
+public class DicList extends Fragment {
 
     private ArrayList<Group> gData = null;
     private ArrayList<ArrayList<Item>> iData = null;
@@ -66,21 +70,19 @@ public class DicList extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
 
-        mContext = DicList.this;
-        exlist_dic = (ExpandableListView) findViewById(R.id.exlist_dic);
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_list, container,false);
+        mContext = getContext();
+        exlist_dic = (ExpandableListView) view.findViewById(R.id.exlist_dic);
 
         //数据准备
         preData();
         myAdapter = new MyBaseExpandableListAdapter(gData,iData,mContext);
         exlist_dic.setAdapter(myAdapter);
-
-
+        return view;
     }
+
 
 }

@@ -22,17 +22,8 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
+        <activity android:name=".Main2"></activity>
 
-        <activity android:name=".MainActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-
-           </activity>
-        <activity android:name=".DicAdpList.DicList"   />
-        <activity android:name=".SentenceAct.SentenceAnal"   />
     </application>
 
 </manifest>
