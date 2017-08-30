@@ -1,10 +1,12 @@
 package com.example.jinyu;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+
 
 
 public class MainActivity extends AppCompatActivity  {
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity  {
         TextView tv = (TextView)findViewById(R.id.click_tx);
         tv.setOnClickListener(new View.OnClickListener()
 
-        {
+ {
 
             public void onClick(View v)
 
@@ -30,9 +32,6 @@ public class MainActivity extends AppCompatActivity  {
                 startActivity(intent);
             }
         });
-
-
-    }
 
 
 }
