@@ -21,7 +21,6 @@ public class SentenceAnal extends Fragment {
     private RecyclerView mRecyclerView;
     private MyAdapter myAdapter;
     private ArrayList<Sentence> mList;
-    private static final int sentNum = 3;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -48,7 +47,7 @@ public class SentenceAnal extends Fragment {
     private void initData(){
         GreenDaoManagerStc database = MainActivity.initialer.getDatabaseStc();
         mList = new ArrayList<Sentence>();
-        for(long id = 0;id < sentNum;id ++){
+        for(long id = 0;id < MainActivity.initialer.getSentenceDbSize();id ++){
             try{
                 mList.add(database.getEntity(id));
             }
