@@ -1,6 +1,7 @@
 package com.example.jinyu.SentenceAct;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         viewHolder.content.setText(sentence.getContent());
         //viewHolder.content.setText("This is the sentence???");
         viewHolder.analysis.setText(sentence.getAnalysis());
-        viewHolder.mImgBtn.setOnClickListener(new View.OnClickListener()
+        viewHolder.cardview.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
 
@@ -59,11 +60,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     // 重写的自定义ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView content,analysis;
-        public ImageButton mImgBtn;
+        public CardView cardview;
 
         public ViewHolder(View v) {
             super(v);
-            mImgBtn = (ImageButton) v.findViewById(R.id.stc_btn);
+            cardview = (CardView) v.findViewById(R.id.cardview);
             content = (TextView)v.findViewById(R.id.stc_cont);
             analysis = (TextView)v.findViewById(R.id.stc_anal);
             //android:text="this is card text"

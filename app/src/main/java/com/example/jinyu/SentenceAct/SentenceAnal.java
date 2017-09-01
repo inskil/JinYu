@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,8 +13,8 @@ import android.view.ViewGroup;
 
 import com.example.jinyu.Database.GreenDaoManagerStc;
 import com.example.jinyu.Database.Sentence;
-import com.example.jinyu.MainActivity;
 import com.example.jinyu.R;
+import com.example.jinyu.StartActivity;
 
 import java.util.ArrayList;
 
@@ -21,6 +22,7 @@ public class SentenceAnal extends Fragment {
     private RecyclerView mRecyclerView;
     private MyAdapter myAdapter;
     private ArrayList<Sentence> mList;
+    private static final int sentNum = 5;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class SentenceAnal extends Fragment {
         // 获取RecyclerView
         mRecyclerView = (RecyclerView) view.findViewById(R.id.list);
         // 设置LinearLayoutManager
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         // 设置ItemAnimator
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         // 设置固定大小
@@ -45,7 +47,7 @@ public class SentenceAnal extends Fragment {
     }
 
     private void initData(){
-        GreenDaoManagerStc database = MainActivity.initialer.getDatabaseStc();
+        GreenDaoManagerStc database = StartActivity.initialer.getDatabaseStc();
         mList = new ArrayList<Sentence>();
         for(long id = 0;id < MainActivity.initialer.getSentenceDbSize();id ++){
             try{

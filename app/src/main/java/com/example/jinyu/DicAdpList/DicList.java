@@ -13,6 +13,7 @@ import com.example.jinyu.Database.GreenDaoManager;
 import com.example.jinyu.Database.Word;
 import com.example.jinyu.MainActivity;
 import com.example.jinyu.R;
+import com.example.jinyu.StartActivity;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -33,7 +34,7 @@ public class DicList extends Fragment {
 
     private void preData(){
         //ArrayList<String>
-        GreenDaoManager db = MainActivity.initialer.getDb();
+        GreenDaoManager db = StartActivity.initialer.getDb();
 
         gData = new ArrayList<Group>();
         iData = new ArrayList<ArrayList<Item>>();

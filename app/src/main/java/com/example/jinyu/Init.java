@@ -46,12 +46,15 @@ public class Init {
 
         //load sentence db
         id = 0;
+
         dbStcSize = 5;
         databaseStc.insert(new Sentence(id++,"这是例句","http://sinacloud.net/jsjmsounds/%E9%B8%A1.mp3","并不存在的句子分析"));
         databaseStc.insert(new Sentence(id++,"这是例句","http://sinacloud.net/jsjmsounds/%E9%B8%A1.mp3","依旧是并不存在的句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析句子分析（猜猜会不会换行）"));
         databaseStc.insert(new Sentence(id++,"这是还例句3","http://sinacloud.net/jsjmsounds/%E9%B8%A1.mp3","并不存在的句子分析"));
         databaseStc.insert(new Sentence(id++,"这是还例句4","http://sinacloud.net/jsjmsounds/%E9%B8%A1.mp3","并不存在的句子分析"));
         databaseStc.insert(new Sentence(id++,"这是还例句5","http://sinacloud.net/jsjmsounds/%E9%B8%A1.mp3","并不存在的句子分析"));
+
+
     }
 
 

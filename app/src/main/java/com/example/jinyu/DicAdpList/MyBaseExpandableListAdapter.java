@@ -7,10 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import com.example.jinyu.R;
 import com.example.jinyu.Sound.Sound;
-
 import java.util.ArrayList;
 
 /**
