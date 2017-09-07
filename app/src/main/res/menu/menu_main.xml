@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@mipmap/icon_about"
+        android:orderInCategory="2"
+        android:title="@string/menu_about" />
+
+    <item
+        android:id="@+id/menu_setting"
+        android:icon="@mipmap/icon_setting"
+        android:orderInCategory="1"
+        android:title="@string/menu_settings" />
+
+
+</menu>

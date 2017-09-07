@@ -9,10 +9,10 @@
         android:id="@+id/exlist_dic"
         android:layout_width="368dp"
         android:layout_height="495dp"
-        android:childDivider="#E02D2F"
-        tools:layout_editor_absoluteY="8dp"
+        android:childDivider="#9898a4"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="8dp" />
 
 
 

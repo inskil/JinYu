@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:padding="5dp"
-    android:background="#6BBA79">
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/tv_name"
@@ -15,18 +14,22 @@
         android:focusable="false"
         android:text="提莫"
         android:textSize="18sp" />
+
     <ImageButton
         android:id="@+id/play_btn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:src="@drawable/button" />
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button"
+        android:scaleType="fitXY" />
+
     <ImageButton
         android:id="@+id/play_btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:src="@drawable/button" />
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button"
+        android:scaleType="fitXY" />
 
 
 </LinearLayout>

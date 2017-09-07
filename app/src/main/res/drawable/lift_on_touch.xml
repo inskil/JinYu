@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-    <!-- animate the translationZ property of a view when pressed -->
+<?xml version="1.0" encoding="utf-8"?><!-- animate the translationZ property of a view when pressed -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_enabled="true"
@@ -12,6 +11,7 @@
                 android:valueType="floatType"/>
         </set>
     </item>
+
     <item>
         <set>
             <objectAnimator
