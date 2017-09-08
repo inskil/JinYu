@@ -12,13 +12,7 @@ import android.os.Handler;
 import android.util.Log;
 
 public class StartActivity extends Activity {
-<<<<<<< HEAD
 
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_start);
-=======
     /** Called when the activity is first created. */
     private final int SPLASH_DISPLAY_LENGHT = 3000; //延迟三秒
     public static Init initialer;
@@ -28,7 +22,6 @@ public class StartActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         initialer = new Init(this);
->>>>>>> f12f286e5b319146f350cc6e43904c2791b07ec1
 
         Log.d("欢迎界面加载","这是欢迎界面");
 
