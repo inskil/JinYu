@@ -10,13 +10,11 @@ import android.os.Handler;
 import com.example.jinyu.DicAdpList.DicList;
 
 public class StartActivity extends Activity {
-    public static Init initialer;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_start);
-            initialer = new Init(this);
 
             /* Called when the activity is first created. */
             int SPLASH_DISPLAY_LENGHT = 3000;

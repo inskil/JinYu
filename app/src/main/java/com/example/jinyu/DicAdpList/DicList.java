@@ -29,7 +29,6 @@ public class DicList extends Fragment {
     private String[] cateList = {"1","2"};
     //to be modified
 
-    private static final int MAXDATA = 2; //to be modified
 
     private void preData(){
         //ArrayList<String>
@@ -38,7 +37,8 @@ public class DicList extends Fragment {
         gData = new ArrayList<Group>();
         iData = new ArrayList<ArrayList<Item>>();
         ArrayList<String> nameList;
-        for(int i = 0;i < MAXDATA;i ++){
+        int maxSize = cateList.length;
+        for(int i = 0;i < maxSize;i ++){
             gData.add(new Group(cateList[i]));
             lData = new ArrayList<Item>();
             nameList = new ArrayList<String>();

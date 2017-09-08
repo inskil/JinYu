@@ -42,6 +42,7 @@ public class Init {
         database.insert(new Word(id++,"鸡","http://sinacloud.net/jsjmsounds/%E9%B8%A1.mp3","1"));
         database.insert(new Word(id++,"麻雀","http://sinacloud.net/jsjmsounds/%E9%BA%BB%E9%9B%802.mp3","2"));
         database.insert(new Word(id++,"麻雀","http://sinacloud.net/jsjmsounds/%E9%BA%BB%E9%9B%80.mp3","2"));
+        database.insert(new Word(id++,"猴子","http://sinacloud.net/jsjmsounds/%E7%8C%B4%E5%AD%90.wav","2"));
 
 
         //load sentence db
