@@ -11,5 +11,6 @@
     <string name="tab_menu_profile">日推</string>
     <string name="tab_menu_pay">句子赏析</string>
     <string name="tab_menu_setting">设置</string>
+    <string name="BackTotop">返回顶层</string>
 
 </resources>

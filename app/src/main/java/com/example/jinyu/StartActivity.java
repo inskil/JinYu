@@ -2,34 +2,48 @@ package com.example.jinyu;
 
 /**
  * Created by hasee on 2017/8/27.
+ * this is a welcome view
  */
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import com.example.jinyu.DicAdpList.DicList;
+import android.util.Log;
 
 public class StartActivity extends Activity {
+<<<<<<< HEAD
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_start);
+=======
+    /** Called when the activity is first created. */
+    private final int SPLASH_DISPLAY_LENGHT = 3000; //延迟三秒
+    public static Init initialer;
 
-            /* Called when the activity is first created. */
-            int SPLASH_DISPLAY_LENGHT = 3000;
-            new Handler().postDelayed(new Runnable(){
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_start);
+        initialer = new Init(this);
+>>>>>>> f12f286e5b319146f350cc6e43904c2791b07ec1
 
-                @Override
-                public void run() {
-                    Intent mainIntent = new Intent(StartActivity.this,MainActivity.class);
-                    StartActivity.this.startActivity(mainIntent);
-                    StartActivity.this.finish();
-                }
+        Log.d("欢迎界面加载","这是欢迎界面");
 
-            }, SPLASH_DISPLAY_LENGHT);
-        }
+        new Handler().postDelayed(new Runnable(){
 
+            @Override
+            public void run() {
+                Intent mainIntent = new Intent(StartActivity.this,MainActivity.class);
+                startActivity(mainIntent);
+                StartActivity.this.finish();
+            }
+
+        }, SPLASH_DISPLAY_LENGHT);
     }
+
+}
 
 
