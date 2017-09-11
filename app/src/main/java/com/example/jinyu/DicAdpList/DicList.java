@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,10 @@ public class DicList extends Fragment {
             lData = new ArrayList<Item>();
             nameList = new ArrayList<String>();
             ArrayList<Word> wordlist = db.getList(cateList[i]);
+
+            //for debug
+            Log.d("database debug",Integer.toString(wordlist.size()));
+
             for(Iterator<Word> it = wordlist.iterator();it.hasNext();){
                 Word word = it.next();
                 //check the same item with different pronunciations

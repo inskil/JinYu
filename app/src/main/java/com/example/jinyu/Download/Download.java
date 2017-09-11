@@ -22,8 +22,8 @@ public class Download {
         request.setMimeType(mimeString);
 
         //在通知栏中显示，默认就是显示的
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
-        request.setVisibleInDownloadsUi(true);
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+        request.setVisibleInDownloadsUi(false);
 
 //指定下载路径和下载文件名
         request.setDestinationInExternalPublicDir("/download/", fileName);

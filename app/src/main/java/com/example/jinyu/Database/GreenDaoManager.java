@@ -31,7 +31,9 @@ public class GreenDaoManager {
         //获取Dao对象管理者
         daoSession = daoMaster.newSession();
     }
-
+    public void dropAll(){
+        daoSession.getWordDao().deleteAll();
+    }
     public void insert(Word Word){
         daoSession.getWordDao().insert(Word);
     }

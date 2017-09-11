@@ -17,6 +17,7 @@ public class StartActivity extends Activity {
     private final int SPLASH_DISPLAY_LENGHT = 3000; //延迟三秒
     public static Init initialer;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
