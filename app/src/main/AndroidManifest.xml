@@ -27,12 +27,6 @@
 
         </activity>
 
-
-
-        <activity android:name=".Main2">
-
-        </activity>
-
     </application>
 
 </manifest>

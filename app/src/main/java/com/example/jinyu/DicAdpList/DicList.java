@@ -2,7 +2,6 @@ package com.example.jinyu.DicAdpList;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,9 +11,8 @@ import android.widget.ExpandableListView;
 
 import com.example.jinyu.Database.GreenDaoManager;
 import com.example.jinyu.Database.Word;
-import com.example.jinyu.MainActivity;
+import com.example.jinyu.Init;
 import com.example.jinyu.R;
-import com.example.jinyu.StartActivity;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -28,13 +26,15 @@ public class DicList extends Fragment {
     private ExpandableListView exlist_dic;
     private MyBaseExpandableListAdapter myAdapter = null;
 
-    private String[] cateList = {"1","2"};
-    //to be modified
+
+    private String[] cateList ;
 
 
     private void preData(){
         //ArrayList<String>
-        GreenDaoManager db = StartActivity.initialer.getDb();
+        cateList = Init.getCateList();
+        GreenDaoManager db = new GreenDaoManager();
+        db.setupDatabase(getContext(),Init.dbname);
 
         gData = new ArrayList<Group>();
         iData = new ArrayList<ArrayList<Item>>();
@@ -46,8 +46,6 @@ public class DicList extends Fragment {
             nameList = new ArrayList<String>();
             ArrayList<Word> wordlist = db.getList(cateList[i]);
 
-            //for debug
-            Log.d("database debug",Integer.toString(wordlist.size()));
 
             for(Iterator<Word> it = wordlist.iterator();it.hasNext();){
                 Word word = it.next();
@@ -65,6 +63,7 @@ public class DicList extends Fragment {
                 if(flag!=-1){
                     Item itemSameName = lData.get(flag);
                     itemSameName.addUrl(word.getUrl());
+                    Log.d(word.getName(),word.getUrl());
                 }
                 else{
                     lData.add(new Item(Integer.valueOf(Long.toString(word.getId())),word.getName(),word.getUrl()));

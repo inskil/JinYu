@@ -3,7 +3,6 @@ package com.example.jinyu.SentenceAct;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,8 +12,8 @@ import android.view.ViewGroup;
 
 import com.example.jinyu.Database.GreenDaoManagerStc;
 import com.example.jinyu.Database.Sentence;
+import com.example.jinyu.Init;
 import com.example.jinyu.R;
-import com.example.jinyu.StartActivity;
 
 import java.util.ArrayList;
 
@@ -22,7 +21,6 @@ public class SentenceAnal extends Fragment {
     private RecyclerView mRecyclerView;
     private MyAdapter myAdapter;
     private ArrayList<Sentence> mList;
-    private static final int sentNum = 5;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,9 +45,10 @@ public class SentenceAnal extends Fragment {
     }
 
     private void initData(){
-        GreenDaoManagerStc database = StartActivity.initialer.getDatabaseStc();
+        GreenDaoManagerStc database = new GreenDaoManagerStc();
+        database.setupDatabase(getContext(),Init.dbStcName);
         mList = new ArrayList<Sentence>();
-        for(long id = 0;id < StartActivity.initialer.getSentenceDbSize();id ++){
+        for(long id = 0; ; id ++){
             try{
                 mList.add(database.getEntity(id));
             }
