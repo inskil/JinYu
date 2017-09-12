@@ -49,7 +49,7 @@ public class SentenceAnal extends Fragment {
     private void initData(){
         GreenDaoManagerStc database = StartActivity.initialer.getDatabaseStc();
         mList = new ArrayList<Sentence>();
-        for(long id = 0;id < sentNum;id ++){
+        for(long id = 0;id < MainActivity.initialer.getSentenceDbSize();id ++){
             try{
                 mList.add(database.getEntity(id));
             }
