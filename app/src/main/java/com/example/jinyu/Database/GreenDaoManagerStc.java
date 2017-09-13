@@ -28,6 +28,10 @@ public class GreenDaoManagerStc {
         daoSession = daoMaster.newSession();
     }
 
+    public void dropAll(){
+        daoSession.getSentenceDao().deleteAll();
+    }
+
     public void insert(Sentence sentence){ daoSession.getSentenceDao().insert(sentence);}
 
     public String getUrl(Sentence sentence){return sentence.getSound_url();}
