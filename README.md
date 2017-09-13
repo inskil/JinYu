@@ -27,11 +27,12 @@ WeChat media platform
 * add bottom-navigation-bar
 * switch from multi-activity structure to single-activity-multi-fragment structure
 
-## To-do list
+## About version 4.0 - Beta Version
+* UI design ready
+* database loaded
+* download module ready
 
-* data processing -ing
-* UI designing -ing
-* data loading  -to do
+##To-do list
 * server service -to do
 * ...
 
