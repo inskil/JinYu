@@ -7,6 +7,7 @@
     <!-- 如果将下载的文件保存到外部存储器，还需要配置外部存储器的读写权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
 
     <application
         android:allowBackup="true"
@@ -23,12 +24,6 @@
         </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
-
-        </activity>
-
-
-
-        <activity android:name=".Main2">
 
         </activity>
 
