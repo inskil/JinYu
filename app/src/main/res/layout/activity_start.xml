@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:orientation="vertical"
     android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
 
 
@@ -10,9 +11,8 @@
         android:id="@+id/startView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:content="@drawable/face"
-        android:contentDescription="JINYU" />
+        android:background="@drawable/face"
+        android:orientation="vertical" />
 
 
 </LinearLayout>

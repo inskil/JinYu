@@ -12,9 +12,9 @@ import android.os.Handler;
 import android.util.Log;
 
 public class StartActivity extends Activity {
+    public static Init initialer;
     /** Called when the activity is first created. */
     private final int SPLASH_DISPLAY_LENGHT = 3000; //延迟三秒
-    public static Init initialer;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,8 @@ public class StartActivity extends Activity {
         initialer = new Init(this.getApplicationContext(),this);
 
         Log.d("欢迎界面", "欢迎界面部署完毕");
-
-        /*new Handler().postDelayed(new Runnable(){
+            /*
+        new Handler().postDelayed(new Runnable(){
 
             @Override
             public void run() {
@@ -33,12 +33,25 @@ public class StartActivity extends Activity {
                 StartActivity.this.finish();
             }
 
-        }, SPLASH_DISPLAY_LENGHT);
-*/
+        }, SPLASH_DISPLAY_LENGHT);      */
+
     }
+
     public void newAct(){
-        Intent mainIntent = new Intent(StartActivity.this,MainActivity.class);
-        startActivity(mainIntent);
+
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                Intent mainIntent = new Intent(StartActivity.this, MainActivity.class);
+                startActivity(mainIntent);
+                StartActivity.this.finish();
+            }
+
+        }, SPLASH_DISPLAY_LENGHT);
+        // Intent mainIntent = new Intent(StartActivity.this,MainActivity.class);
+        //  startActivity(mainIntent);
     }
 }
 

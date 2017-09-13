@@ -26,7 +26,7 @@ public class MyWebView extends WebView {
         super(context, attrs, defStyleAttr);
     }
 
-    /*
+    /*      基本没啥用的部分了其实这个MYWEBVIRW就没啥用
     @Override
     protected void onScrollChanged(int x, int y, int oldx, int oldy) {
         super.onScrollChanged(x, y, oldx, oldy);
