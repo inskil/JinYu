@@ -9,49 +9,47 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.util.Log;
 
 public class StartActivity extends Activity {
     public static Init initialer;
     /** Called when the activity is first created. */
     private final int SPLASH_DISPLAY_LENGHT = 3000; //延迟三秒
+    private long stTime ;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        stTime = System.currentTimeMillis();
+
         initialer = new Init(this.getApplicationContext(),this);
-
-        Log.d("欢迎界面", "欢迎界面部署完毕");
-            /*
-        new Handler().postDelayed(new Runnable(){
-
-            @Override
-            public void run() {
-                Intent mainIntent = new Intent(StartActivity.this,MainActivity.class);
-                startActivity(mainIntent);
-                StartActivity.this.finish();
-            }
-
-        }, SPLASH_DISPLAY_LENGHT);      */
 
     }
 
+    private void startMain(){
+        Intent mainIntent = new Intent(StartActivity.this,MainActivity.class);
+        startActivity(mainIntent);
+        StartActivity.this.finish();
+    }
+
     public void newAct(){
-
-
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                Intent mainIntent = new Intent(StartActivity.this, MainActivity.class);
-                startActivity(mainIntent);
-                StartActivity.this.finish();
-            }
-
-        }, SPLASH_DISPLAY_LENGHT);
-        // Intent mainIntent = new Intent(StartActivity.this,MainActivity.class);
-        //  startActivity(mainIntent);
+        long newActTime = System.currentTimeMillis();
+        long inter = newActTime-stTime;
+        //start view stay no less than SPLASH_DISPLAY_LENGHT
+        if(inter<SPLASH_DISPLAY_LENGHT){
+            new Handler().postDelayed(new Runnable(){
+                @Override
+                public void run() {
+                    startMain();
+                }
+            }, SPLASH_DISPLAY_LENGHT/*-inter*/);
+        }
+        else{
+            startMain();
+        }
     }
 }
 

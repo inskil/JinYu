@@ -36,9 +36,10 @@ public class DayShow extends Fragment implements GestureDetector.OnGestureListen
         btn_icon = (Button) view.findViewById(R.id.btn_icon);
         wView = (MyWebView) view.findViewById(R.id.wView);
 
-        //String url = Init.getRTUrl();
-        //wView.loadUrl(url);
-        wView.loadUrl("http://mp.weixin.qq.com/s/VdHvCFprTUZYStSgImdGKw");
+        String url = Init.getDSUrl();
+        wView.loadUrl(url);
+        //wView.loadUrl("http://mp.weixin.qq.com/s/VdHvCFprTUZYStSgImdGKw");
+
 
         //滑动相应布置
         final GestureDetector mGestureDetector = new GestureDetector(
