@@ -13,12 +13,10 @@ import android.provider.Settings;
 import android.util.Log;
 
 public class StartActivity extends Activity {
-
+    public static Init initialer;
     /** Called when the activity is first created. */
     private final int SPLASH_DISPLAY_LENGHT = 3000; //延迟三秒
     private long stTime ;
-    public static Init initialer;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
