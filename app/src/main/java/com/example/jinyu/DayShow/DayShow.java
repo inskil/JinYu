@@ -37,9 +37,9 @@ public class DayShow extends Fragment {
         wView = (MyWebView) view.findViewById(R.id.wView);
 
 
-        // String url = Init.getRTUrl();
-        //wView.loadUrl(url);
-        wView.loadUrl("http://mp.weixin.qq.com/s/VdHvCFprTUZYStSgImdGKw");
+        String url = Init.getDSUrl();
+        wView.loadUrl(url);
+        //wView.loadUrl("http://mp.weixin.qq.com/s/VdHvCFprTUZYStSgImdGKw");
 
 
         wView.setWebViewClient(new WebViewClient() {

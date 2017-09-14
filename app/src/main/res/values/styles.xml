@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppSplash" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/face</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
     <style name="tab_menu_item">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>

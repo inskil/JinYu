@@ -23,7 +23,7 @@ import java.util.ArrayList;
  * Created by yyx on 2017/8/19.
  */
 
-public class Init {
+public class Init extends Thread{
     public static GreenDaoManager database;
     public static GreenDaoManagerStc databaseStc;
     public static final String dbname = "jsjm.db";
@@ -40,16 +40,15 @@ public class Init {
 
     private File fileWd,fileSt;
 
-    Init(Context context,StartActivity act){
+    Init(Context context,StartActivity act) {
 
         sContext = context.getApplicationContext();
         sdDir = Environment.getExternalStorageDirectory();
         root = sdDir + rootPath;
-
         database = new GreenDaoManager();
         databaseStc = new GreenDaoManagerStc();
-        database.setupDatabase(context,dbname);
-        databaseStc.setupDatabase(context,dbStcName);
+        database.setupDatabase(sContext,dbname);
+        databaseStc.setupDatabase(sContext,dbStcName);
         /*try{
 
             database.getName((long)0);
@@ -173,11 +172,11 @@ public class Init {
     public String getSentenceSource(){return sentenceSource;}
     public String getRootPath(){return rootPath;}
 
-    //for rt activity
-    private static String[] rts = {""};
+    //for dayshow activity
+    private static String[] DSurls = {"http://mp.weixin.qq.com/s/jlle5_4DXBKk7HtHrabhoQ","http://mp.weixin.qq.com/s/HmolWHdnu1D7SINv7Lza3Q"};
     private static int reqCont = 0;
-    public static String getRTUrl(){
-        return rts[(reqCont++)%rts.length];
+    public static String getDSUrl(){
+        return DSurls[(reqCont++)%DSurls.length];
     }
 
 
