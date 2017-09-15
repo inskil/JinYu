@@ -178,7 +178,8 @@ public class Init extends Thread{
     public static String getDSUrl(boolean right){
         if(right) reqCont++;
         else reqCont--;
-        return DSurls[(reqCont)%DSurls.length];
+        if(reqCont<0) reqCont = DSurls.length-1;
+        return DSurls[reqCont%DSurls.length];
     }
 
 
