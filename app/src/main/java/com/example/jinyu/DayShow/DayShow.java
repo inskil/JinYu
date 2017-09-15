@@ -110,8 +110,8 @@ public class DayShow extends Fragment implements GestureDetector.OnGestureListen
     //滑动响应设置
     public void flingLeft() {
         //自定义方法：处理向左滑动事件
-        Log.d("flingLeft()", "相左滑动");
-        String url = Init.getRTUrl();
+        Log.d("flingLeft()", "向左滑动");
+        String url = Init.getDSUrl(false);
         wView.loadUrl(url);
 
     }
@@ -119,7 +119,7 @@ public class DayShow extends Fragment implements GestureDetector.OnGestureListen
     public void flingRight() {
         //自定义方法：处理向右滑动事件
         Log.d("flingright", "向右滑动");
-        String url = Init.getRTUrl();
+        String url = Init.getDSUrl(true);
         wView.loadUrl(url);
     }
 
