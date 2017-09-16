@@ -60,6 +60,10 @@ public class Init extends Thread{
             install_init();
         //}
 
+        File fr = new File(root);
+        if(!fr.exists()||!fr.isDirectory()){
+            fr.mkdir();
+        }
         fileWd = new File(root+wordSource);
         fileSt = new File(root+sentenceSource);
         while (true){
@@ -173,10 +177,17 @@ public class Init extends Thread{
     public String getRootPath(){return rootPath;}
 
     //for dayshow activity
-    private static String[] DSurls = {"http://mp.weixin.qq.com/s/jlle5_4DXBKk7HtHrabhoQ","http://mp.weixin.qq.com/s/HmolWHdnu1D7SINv7Lza3Q"};
+    private static String[] DSurls = {"http://mp.weixin.qq.com/s/jlle5_4DXBKk7HtHrabhoQ",
+            "http://mp.weixin.qq.com/s/HmolWHdnu1D7SINv7Lza3Q",
+        "http://mp.weixin.qq.com/s/tSRY7d3f7X4t7k3YVWMXTw",
+            "http://mp.weixin.qq.com/s/4FsSUx46LDDael95udoZTQ"
+    };
     private static int reqCont = 0;
-    public static String getDSUrl(){
-        return DSurls[(reqCont++)%DSurls.length];
+    public static String getDSUrl(boolean right){
+        if(right) reqCont++;
+        else reqCont--;
+        if(reqCont<0) reqCont = DSurls.length-1;
+        return DSurls[reqCont%DSurls.length];
     }
 
 
