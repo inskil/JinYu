@@ -60,6 +60,10 @@ public class Init extends Thread{
             install_init();
         //}
 
+        File fr = new File(root);
+        if(!fr.exists()||!fr.isDirectory()){
+            fr.mkdir();
+        }
         fileWd = new File(root+wordSource);
         fileSt = new File(root+sentenceSource);
         while (true){
